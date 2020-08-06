@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using LibreriaFundanet;
+using LibreriaSemicrol;
 using Proyecto_1.Clases;
 using Proyecto_1.EmpresaAlquiler;
+
 namespace Proyecto_1
 {
     class Program22
@@ -39,7 +40,7 @@ namespace Proyecto_1
             {
                 Console.WriteLine(clave);
             }
-            Telefono e;
+            //Telefono t;
             Console.ReadLine();
         }
     }
