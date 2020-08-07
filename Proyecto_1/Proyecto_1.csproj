@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Proyecto_1.EjemploPack.Program28</StartupObject>
+    <StartupObject>Proyecto_1.TratamientoExcepciones.Program33</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -144,6 +144,12 @@
     <Compile Include="EjemploPack\Program28.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Clases\Rectangulo.cs" />
+    <Compile Include="TratamientoExcepciones\Persona.cs" />
+    <Compile Include="TratamientoExcepciones\Program33.cs" />
+    <Compile Include="TratamientoExcepciones\Program32.cs" />
+    <Compile Include="TratamientoExcepciones\Program31.cs" />
+    <Compile Include="TratamientoExcepciones\Program30.cs" />
+    <Compile Include="TratamientoExcepciones\Program29.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
