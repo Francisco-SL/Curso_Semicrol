@@ -1,0 +1,35 @@
+/*INSERT INTO Sala VALUES (1);
+INSERT INTO Sala VALUES (2);
+INSERT INTO Sala VALUES (3);
+INSERT INTO Sala VALUES (4);
+INSERT INTO Sala VALUES (5);
+INSERT INTO Fila VALUES (1, 1);
+INSERT INTO Fila VALUES (2, 1);
+INSERT INTO Fila VALUES (3, 1);
+INSERT INTO Fila VALUES (4, 1);
+INSERT INTO Fila VALUES (5, 1);
+INSERT INTO Butaca VALUES (1, 1, 1);
+INSERT INTO Butaca VALUES (2, 2, 2);
+INSERT INTO Butaca VALUES (3, 2,3);
+INSERT INTO Butaca VALUES (4, 2, 1);
+INSERT INTO Butaca VALUES (5, 1, 1);
+INSERT INTO Pelicula VALUES ('PEL1', 'Pelicula 1', 'Pedro', 145);
+INSERT INTO Pelicula VALUES ('PEL2', 'Pelicula 2', 'Jaime', 154);
+INSERT INTO Pelicula VALUES ('PEL3', 'Pelicula 3', 'Pedro', 65);
+INSERT INTO Pelicula VALUES ('PEL4', 'Pelicula 4', 'Pablo', 145);
+INSERT INTO Pelicula VALUES ('PEL5', 'Pelicula 5', 'Pedro', 280);
+INSERT INTO Sesion VALUES (1, '2020/08/15','10:34:09','PEL1',3);
+INSERT INTO Sesion VALUES (2, '2020/08/16','18:15:35','PEL2',2);
+INSERT INTO Sesion VALUES (3, '2020/08/17','22:34:00','PEL3',1);
+INSERT INTO Sesion VALUES (4, '2020/08/15','10:34:09','PEL1',2);
+INSERT INTO Persona VALUES ('143145', 'Nombre1', 'Apellido1');
+INSERT INTO Persona VALUES ('274347', 'Nombre2', 'Apellido2');
+INSERT INTO Persona VALUES ('356536', 'Nombre3', 'Apellido3');
+INSERT INTO Persona VALUES ('865345', 'Nombre4', 'Apellido4');
+INSERT INTO Persona VALUES ('224567', 'Nombre5', 'Apellido5');
+INSERT INTO Entrada VALUES (1, 55.4, 1, 2, 3, 4, '143145');
+INSERT INTO Entrada VALUES (2, 55.4, 2, 3, 4, 1, '865345');
+INSERT INTO Entrada VALUES (3, 55.4, 3, 4, 1, 2, '224567');
+INSERT INTO Entrada VALUES (4, 55.4, 4, 1, 2, 3, '356536');*/
+
+
