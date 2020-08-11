@@ -13,6 +13,7 @@ SELECT *
 FROM Persona 
 LEFT JOIN Entrada ON Persona.DNI = Entrada.Persona_DNI;
 */
+
 SELECT Persona.DNI, CONCAT(Persona.Nombre, ' ', Persona.Apellidos) AS 'Persona', Entrada.Id, Sesion.Id, Sesion.Pelicula_ISBN, Pelicula.Titulo
 FROM Persona
 INNER JOIN Entrada ON Persona.DNI = Entrada.Persona_DNI
