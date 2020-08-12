@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ConexionSQL_1.ListarDatos</StartupObject>
+    <StartupObject>ConexionSQL_1.EjecutableDTO</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -48,8 +48,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actualizar.cs" />
-    <Compile Include="Clases\Factura.cs" />
+    <Compile Include="EjecutableDTO.cs" />
+    <Compile Include="FacturaLineaDTO.cs" />
+    <Compile Include="LineaFactura.cs" />
+    <Compile Include="BusquedaConcepto.cs" />
+    <Compile Include="Clases\FacturaActiveRecord.cs" />
+    <Compile Include="Busqueda.cs" />
+    <Compile Include="ActualizarAR.cs" />
+    <Compile Include="Clases\FiltroFactura.cs" />
+    <Compile Include="Clases\LineaFacturaAR.cs" />
     <Compile Include="Eliminacion.cs" />
+    <Compile Include="ParametroFiltro.cs" />
     <Compile Include="ListarDatos.cs" />
     <Compile Include="PrimerUsoClaseAR.cs" />
     <Compile Include="Insertar.cs" />
