@@ -17,7 +17,7 @@ namespace ConexionSQL_1
             {
                 foreach (FacturaLineaDTO lfar in lista)
                 {
-                    Console.WriteLine(lfar.ToString());
+                    Console.WriteLine("Concepto: {0}\tUnidades totales: {1}", lfar.Concepto, lfar.Unidades);
                 }
             }
             else

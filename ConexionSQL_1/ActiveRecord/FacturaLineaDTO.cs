@@ -79,9 +79,8 @@ namespace ConexionSQL_1
                 Console.WriteLine("ERROR SQL: {0}", e.Message);
                 return null;
             }
-
         }
 
-
+        
     }
 }

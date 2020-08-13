@@ -8,7 +8,7 @@ using ConexionSQL_1.Clases;
 
 namespace ConexionSQL_1
 {
-    class Insertar
+    class InsertarPersistencia
     {
         static void Main(string[] args)
         {

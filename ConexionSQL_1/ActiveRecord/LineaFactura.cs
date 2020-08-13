@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using ConexionSQL_1.Clases;
-namespace ConexionSQL_1
+namespace ConexionSQL_1.Clases
 {
     class LineaFactura
     {
