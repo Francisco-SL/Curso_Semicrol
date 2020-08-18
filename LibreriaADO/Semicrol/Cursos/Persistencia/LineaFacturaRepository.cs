@@ -9,7 +9,7 @@ namespace Semicrol.Cursos.PersistenciaADO
     {
         public static string CadenaConexion => ConfigurationManager.ConnectionStrings["miConexion"].ConnectionString;
 
-        public void Insertar(Dominio.LineaFactura lf)
+        public void Insertar(LineaFactura lf)
         {
             string query = "INSERT INTO LineasFactura VALUES (@prNumero, (SELECT Factura.Numero FROM Factura WHERE Factura.Numero=@prNumFac), (SELECT Numero FROM Producto WHERE Producto.Nombre=@prProdNombre), @prUnidades)";
             try
@@ -32,7 +32,7 @@ namespace Semicrol.Cursos.PersistenciaADO
             }
         }
 
-        public void Eliminar(Dominio.LineaFactura f)
+        public void Eliminar(LineaFactura f)
         {
             string query = "DELETE LineasFactura WHERE Numero = @prNum";
             try
@@ -52,7 +52,7 @@ namespace Semicrol.Cursos.PersistenciaADO
             }
         }
 
-        public void ActualizarUnidadesLinea(Dominio.LineaFactura f)
+        public void ActualizarUnidadesLinea(LineaFactura f)
         {
             string query = "UPDATE LineasFactura SET Unidades = @prUni WHERE Numero = @prNum";
             try
@@ -73,10 +73,10 @@ namespace Semicrol.Cursos.PersistenciaADO
             }
         }
 
-        public List<Dominio.LineaFactura> BuscarTodos()
+        public List<LineaFactura> BuscarTodos()
         {
             string query = "SELECT LineasFactura.Numero, LineasFactura.Numero, Producto.Nombre, LineasFactura.Numero FROM LineasFactura INNER JOIN Producto ON Producto.Numero = LineasFactura.Producto_Numero";
-            List<Dominio.LineaFactura> list = new List<Dominio.LineaFactura>();
+            List<LineaFactura> list = new List<LineaFactura>();
             try
             {
                 using (SqlConnection conexion = new SqlConnection(CadenaConexion))
@@ -86,7 +86,7 @@ namespace Semicrol.Cursos.PersistenciaADO
                     SqlDataReader reader = comando.ExecuteReader();
                     while (reader.Read())
                     {
-                        list.Add(new Dominio.LineaFactura(reader.GetInt32(0), new Dominio.Factura(reader.GetInt32(1)), reader.GetString(2), reader.GetInt32(3)));
+                        list.Add(new LineaFactura(reader.GetInt32(0), new Factura(reader.GetInt32(1)), reader.GetString(2), reader.GetInt32(3)));
                     }
                 }
                 return list;

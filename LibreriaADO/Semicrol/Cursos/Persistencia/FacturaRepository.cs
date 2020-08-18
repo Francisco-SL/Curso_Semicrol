@@ -10,7 +10,7 @@ namespace Semicrol.Cursos.PersistenciaADO
 
         public static string CadenaConexion => ConfigurationManager.ConnectionStrings["miConexion"].ConnectionString;
 
-        public void Insertar(Dominio.Factura f)
+        public void Insertar(Factura f)
         {
             string query = "INSERT INTO Factura VALUES (@prNum, @prCon)";
             try
@@ -31,7 +31,7 @@ namespace Semicrol.Cursos.PersistenciaADO
             }
         }
 
-        public void Borrar(Dominio.Factura f)
+        public void Borrar(Factura f)
         {
             string query = "DELETE Factura WHERE Numero = @prNum";
             try
@@ -51,7 +51,7 @@ namespace Semicrol.Cursos.PersistenciaADO
             }
         }
 
-        public void Actualizar(Dominio.Factura f)
+        public void Actualizar(Factura f)
         {
             string query = "UPDATE Factura SET Concepto = @prCon WHERE Numero = @prNum";
             try
@@ -72,10 +72,10 @@ namespace Semicrol.Cursos.PersistenciaADO
             }
         }
 
-        public List<Dominio.Factura> BuscarTodos()
+        public List<Factura> BuscarTodos()
         {
             string query = "SELECT * FROM Factura";
-            List<Dominio.Factura> list = new List<Dominio.Factura>();
+            List<Factura> list = new List<Factura>();
             try
             {
                 using (SqlConnection conexion = new SqlConnection(CadenaConexion))
@@ -85,7 +85,7 @@ namespace Semicrol.Cursos.PersistenciaADO
                     SqlDataReader reader = comando.ExecuteReader();
                     while (reader.Read())
                     {
-                        list.Add(new Dominio.Factura(Convert.ToInt32(reader["Numero"]), Convert.ToString(reader["Concepto"])));
+                        list.Add(new Factura(Convert.ToInt32(reader["Numero"]), Convert.ToString(reader["Concepto"])));
                     }
                 }
                 return list;
@@ -97,10 +97,10 @@ namespace Semicrol.Cursos.PersistenciaADO
             }
         }
 
-        public List<Dominio.Factura> BuscarTodos(FiltroFacturaNuevo f)
+        public List<Factura> BuscarTodos(FiltroFacturaNuevo f)
         {
             string query = "SELECT * FROM Factura";
-            List<Dominio.Factura> list = new List<Dominio.Factura>();
+            List<Factura> list = new List<Factura>();
             try
             {
                 using (SqlConnection conexion = new SqlConnection(CadenaConexion))
@@ -127,7 +127,7 @@ namespace Semicrol.Cursos.PersistenciaADO
                     SqlDataReader reader = comando.ExecuteReader();
                     while (reader.Read())
                     {
-                        list.Add(new Dominio.Factura(Convert.ToInt32(reader["Numero"]), Convert.ToString(reader["Concepto"])));
+                        list.Add(new Factura(Convert.ToInt32(reader["Numero"]), Convert.ToString(reader["Concepto"])));
                     }
                     reader.Close();
                 }
@@ -140,7 +140,7 @@ namespace Semicrol.Cursos.PersistenciaADO
             }
         }
 
-        public Dominio.Factura BuscarUno(int f)
+        public Factura BuscarUno(int f)
         {
             string query = "SELECT * FROM Factura WHERE Numero = @prNum";
             try
@@ -152,7 +152,7 @@ namespace Semicrol.Cursos.PersistenciaADO
                     comando.Parameters.Add(new SqlParameter("@prNum", f));
                     SqlDataReader reader = comando.ExecuteReader();
                     if (reader.Read())
-                        return new Dominio.Factura(f, Convert.ToString(reader["Concepto"]));
+                        return new Factura(f, Convert.ToString(reader["Concepto"]));
                     else
                         return null;
                 }

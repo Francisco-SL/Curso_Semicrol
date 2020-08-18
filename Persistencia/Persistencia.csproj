@@ -46,6 +46,7 @@
     <Compile Include="Semicrol\Cursos\Persistencia\FacturaRepository.cs" />
     <Compile Include="Semicrol\Cursos\Persistencia\Filtros\FiltroFacturaNuevo.cs" />
     <Compile Include="Semicrol\Cursos\Persistencia\IFacturaRepositorio.cs" />
+    <Compile Include="Semicrol\Cursos\Persistencia\ILineasFacturaRepository.cs" />
     <Compile Include="Semicrol\Cursos\Persistencia\LineaFacturaRepository.cs" />
   </ItemGroup>
   <ItemGroup>

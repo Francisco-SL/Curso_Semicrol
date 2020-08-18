@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using Semicrol.Cursos.Persistencia.Filtros;
 using Semicrol.Cursos.Dominio;
+
 namespace Semicrol.Cursos.Persistencia
 {
     public class FacturaRepository : IFacturaRepositorio
@@ -88,8 +89,9 @@ namespace Semicrol.Cursos.Persistencia
                     {
                         list.Add(new Factura(Convert.ToInt32(reader["Numero"]), Convert.ToString(reader["Concepto"])));
                     }
+                    return list;
                 }
-                return list;
+               
             }
             catch (SqlException e)
             {
@@ -157,6 +159,47 @@ namespace Semicrol.Cursos.Persistencia
                     else
                         return null;
                 }
+            }
+            catch (SqlException e)
+            {
+                Console.WriteLine("ERROR SQL: {0}", e.Message);
+                return null;
+            }
+        }
+
+        public List<Factura> BuscarTodosLineas()
+        {
+            string query = "SELECT Factura.Numero AS facturaNumero, factura.Concepto, LineasFactura.Numero AS lineaNumero, Unidades, Producto_Numero" +
+                " FROM Factura INNER JOIN LineasFactura ON Factura.Numero = LineasFactura.Factura_numero";
+            List<Factura> listaFacturas = new List<Factura>();
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(CadenaConexion))
+                {
+                    conexion.Open();
+                    SqlCommand comando = new SqlCommand(query, conexion);
+                    SqlDataReader reader = comando.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        Factura fac = new Factura(Convert.ToInt32(reader["facturaNumero"]));
+                        if(!listaFacturas.Contains(fac))
+                        {
+                            fac.Concepto = Convert.ToString(reader["Concepto"]);
+                            listaFacturas.Add(fac);
+                        }
+                        else
+                        {
+                            fac = listaFacturas.Find((facturita) => fac.Numero == Convert.ToInt32(reader["facturaNumero"]));
+                        }
+                        LineaFactura linea = new LineaFactura();
+                        linea.Factura = fac;
+                        linea.Numero = Convert.ToInt32(reader["lineaNumero"]);
+                        linea.Producto = Convert.ToString(reader["Producto_Numero"]);
+                        linea.Unidades = Convert.ToInt32(reader["Unidades"]);
+                        fac.AddLinea(linea);
+                    }
+                }
+                return listaFacturas;
             }
             catch (SqlException e)
             {

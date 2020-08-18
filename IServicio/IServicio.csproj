@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6806F362-417A-4D46-A748-36761E64D20E}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>ConexionSQL_1</RootNamespace>
-    <AssemblyName>ConexionSQL_1</AssemblyName>
+    <ProjectGuid>{7B63E46D-E839-42DA-8315-29C0357B6861}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IServicio</RootNamespace>
+    <AssemblyName>IServicio</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,16 +23,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>ConexionSQL_1.Persistencia.EjecutableISERVICIO</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -47,49 +42,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActiveRecord\Actualizar.cs" />
-    <Compile Include="ActiveRecord\EjecutableDTO.cs" />
-    <Compile Include="ActiveRecord\FacturaLineaDTO.cs" />
-    <Compile Include="ActiveRecord\LineaFactura.cs" />
-    <Compile Include="ActiveRecord\BusquedaConcepto.cs" />
-    <Compile Include="ActiveRecord\Clases\FacturaActiveRecord.cs" />
-    <Compile Include="ActiveRecord\Busqueda.cs" />
-    <Compile Include="ActiveRecord\ActualizarAR.cs" />
-    <Compile Include="ActiveRecord\Clases\FiltroFactura.cs" />
-    <Compile Include="ActiveRecord\Clases\LineaFacturaAR.cs" />
-    <Compile Include="ActiveRecord\Eliminacion.cs" />
-    <Compile Include="ActiveRecord\ParametroFiltro.cs" />
-    <Compile Include="ActiveRecord\ListarDatos.cs" />
-    <Compile Include="ActiveRecord\PrimerUsoClaseAR.cs" />
-    <Compile Include="ActiveRecord\Insertar.cs" />
-    <Compile Include="ActiveRecord\Consulta.cs" />
-    <Compile Include="EjecutableISERVICIO.cs" />
-    <Compile Include="EjecutableGrafos.cs" />
-    <Compile Include="EjecutableRepositoryLineaFactura.cs" />
-    <Compile Include="EjecutableRepositoryFactura.cs" />
+    <Compile Include="Semicrol\Cursos\Servicios\IServicioFacturacion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
+    <Compile Include="Semicrol\Cursos\Servicios\ServicioFacturas.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dominio\Dominio.csproj">
       <Project>{3477e964-ab85-474d-9e26-4bbab604fdfc}</Project>
       <Name>Dominio</Name>
     </ProjectReference>
-    <ProjectReference Include="..\IServicio\IServicio.csproj">
-      <Project>{7b63e46d-e839-42da-8315-29c0357b6861}</Project>
-      <Name>IServicio</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LibreriaADO\LibreriaADO.csproj">
-      <Project>{9483B4BD-70C8-487B-8EFA-434A47433EC0}</Project>
-      <Name>LibreriaADO</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Persistencia\Persistencia.csproj">
       <Project>{51692579-d80b-4a02-a7be-c07be12bf0fa}</Project>
       <Name>Persistencia</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
