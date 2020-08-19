@@ -26,6 +26,6 @@ namespace Formulario1
             comboBox1.DataSource = listaPersonas;
             comboBox1.ValueMember = "Edad";
             comboBox1.DisplayMember = "Nombre";
-        }
+        }//5
     }
 }
