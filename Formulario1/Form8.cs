@@ -10,22 +10,17 @@ using System.Windows.Forms;
 
 namespace Formulario1
 {
-    public partial class Form7 : Form
+    public partial class Form8 : Form
     {
-        List<Persona> listaPersonas = new List<Persona>();
-
-        public Form7()
+        public Form8()
         {
             InitializeComponent();
         }
 
-        private void Form7_Load(object sender, EventArgs e)
+        private void Form8_Load(object sender, EventArgs e)
         {
             IPersonasRepository repo = new PersonaRepositoryMemoria();
-            IList<Persona> listaPersonas= repo.BuscarTodos();
-            comboBox1.DataSource = listaPersonas;
-            comboBox1.ValueMember = "Edad";
-            comboBox1.DisplayMember = "Nombre";
+            dataGridView1.DataSource = repo.BuscarTodos();
         }
     }
 }

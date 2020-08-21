@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Formulario1
+namespace FormBindingFacaturas
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Formulario1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form18());
+            Application.Run(new Form1());
         }
     }
 }

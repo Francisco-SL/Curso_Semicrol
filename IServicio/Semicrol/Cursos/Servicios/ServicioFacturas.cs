@@ -67,5 +67,7 @@ namespace Semicrol.Cursos.Servicios
         {
             return repoFacturas.BuscarTodos();
         }
+
+      
     }
 }

@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transaccion", "Transaccion\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Formulario1", "Formulario1\Formulario1.csproj", "{8FB8D811-CB8A-4D72-B8D7-3B6FC37663D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormBindingFacturas", "FormBindingFacaturas\FormBindingFacturas.csproj", "{45B31429-F1A2-46F6-9EA4-3E3E79B63897}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsolaXML", "ConsolaXML\ConsolaXML.csproj", "{3204742F-BE70-468E-9305-917ADE43BAFD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,14 @@ Global
 		{8FB8D811-CB8A-4D72-B8D7-3B6FC37663D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FB8D811-CB8A-4D72-B8D7-3B6FC37663D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FB8D811-CB8A-4D72-B8D7-3B6FC37663D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45B31429-F1A2-46F6-9EA4-3E3E79B63897}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45B31429-F1A2-46F6-9EA4-3E3E79B63897}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45B31429-F1A2-46F6-9EA4-3E3E79B63897}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45B31429-F1A2-46F6-9EA4-3E3E79B63897}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3204742F-BE70-468E-9305-917ADE43BAFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3204742F-BE70-468E-9305-917ADE43BAFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3204742F-BE70-468E-9305-917ADE43BAFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3204742F-BE70-468E-9305-917ADE43BAFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

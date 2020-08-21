@@ -14,7 +14,7 @@ namespace Semicrol.Cursos.Servicios
         void BorrarLineaFactura(LineaFactura lnf);
         void ActualizarLineaFactura(LineaFactura lnf);
         List<Factura> BuscarFacturaFiltro(FiltroFacturaNuevo f);        
-        List<LineaFactura> ListarLineasFactura();
+       List<LineaFactura> ListarLineasFactura();
         Factura BuscarFactura(int f);
 
     }
