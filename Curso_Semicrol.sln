@@ -29,6 +29,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormBindingFacturas", "Form
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsolaXML", "ConsolaXML\ConsolaXML.csproj", "{3204742F-BE70-468E-9305-917ADE43BAFD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{1DDAF834-CD59-49DD-AB15-848CA2741167}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjemploAPI", "EjemploAPI\EjemploAPI.csproj", "{457F731D-2197-4EF6-9B52-75A19EBD3AF7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +91,14 @@ Global
 		{3204742F-BE70-468E-9305-917ADE43BAFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3204742F-BE70-468E-9305-917ADE43BAFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3204742F-BE70-468E-9305-917ADE43BAFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DDAF834-CD59-49DD-AB15-848CA2741167}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DDAF834-CD59-49DD-AB15-848CA2741167}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DDAF834-CD59-49DD-AB15-848CA2741167}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DDAF834-CD59-49DD-AB15-848CA2741167}.Release|Any CPU.Build.0 = Release|Any CPU
+		{457F731D-2197-4EF6-9B52-75A19EBD3AF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{457F731D-2197-4EF6-9B52-75A19EBD3AF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{457F731D-2197-4EF6-9B52-75A19EBD3AF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{457F731D-2197-4EF6-9B52-75A19EBD3AF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -11,15 +11,20 @@ namespace ConsolaXML
     {
         static void Main(string[] args)
         {
-            XmlReader lector = new XmlTextReader("personas.xml");
+            XmlReader lector = new XmlTextReader("../../Personas.xml");
+            int valor = 0;
             while (lector.Read())
             {
-                if (lector.NodeType == XmlNodeType.Text)
+                if (lector.NodeType == XmlNodeType.Element)
                 {
-                    Console.WriteLine(lector.Value);
+                    if (lector.Name.Equals("edad"))
+                    {
+                        lector.Read();
+                        valor += Convert.ToInt32(lector.Value);
+                    }
                 }
             }
-            
+            Console.WriteLine("Edad total: {0}", valor);
             Console.ReadLine();
         }
     }

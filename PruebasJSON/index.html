@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<script type="text/javascript">
+			function Mensaje(){	
+				var object={mensaje:"Hola objeto", miFuncion:function(){alert("Funciona");}};	
+				object.miFuncion();				
+				console.log(object);
+				var miDocumento=document.getElementsByTagName("body")[0];
+				var p=document.createElement("p");
+				var texto=document.createTextNode(object.mensaje);
+				p.appendChild(texto);
+				miDocumento.appendChild(p);
+			}
+			
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>		
+		<input type="button" value="aceptar" onclick="Mensaje()" />
+	</body>
+</html>
