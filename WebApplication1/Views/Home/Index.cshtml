@@ -5,19 +5,30 @@
 <script type="text/javascript">
 
     $(document).ready(function () {
-        alert("jquery funciona");
+        $("#boton").click(function () {
+            alert("Hola");
+            $.get("../../api/webapi", function (datos) {
+                console.log(datos);
+                datos.forEach(function (dato) {
+                    $("#MiTabla").append("<tr><td>" + dato.Numero + "</td><td>"+dato.Concepto+"</td></tr>");
+                })
+            })
+        })
     });
 
-    function Mensaje() {
-        var object = { mensaje: "Hola objeto", miFuncion: function () { alert("Funciona"); } };
-        object.miFuncion();
-        console.log(object);
-        var miDocumento = document.getElementsByTagName("body")[0];
-        var p = document.createElement("p");
-        var texto = document.createTextNode(object.mensaje);
-        p.appendChild(texto);
-        miDocumento.appendChild(p);
-    }
+    //function Mensaje() {
+    //    var object = { mensaje: "Hola objeto", miFuncion: function () { alert("Funciona"); } };
+    //    object.miFuncion();
+    //    console.log(object);
+    //    var miDocumento = document.getElementsByTagName("body")[0];
+    //    var p = document.createElement("p");
+    //    var texto = document.createTextNode(object.mensaje);
+    //    p.appendChild(texto);
+    //    miDocumento.appendChild(p);
+    //}
 </script>
 
-<input type="button" value="aceptar" onclick="Mensaje()" />
+<br />
+<input type="button" value="aceptar" id="boton" />
+<br />
+<table id="MiTabla"></table>
